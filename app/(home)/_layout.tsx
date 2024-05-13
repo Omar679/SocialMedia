@@ -1,8 +1,12 @@
+import { UseAuth } from "@/providers/AuthProvider";
 import ChatProvider from "@/providers/ChatProvider";
-import { Stack } from "expo-router";
-
+import { Redirect, Stack } from "expo-router";
 
 export default function Homelayout() {
+  const { user } = UseAuth();
+  if (!user) {
+    return <Redirect href={"/(auth)/Login"} />;
+  }
   return (
     <ChatProvider>
       <Stack>
