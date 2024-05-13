@@ -24,7 +24,7 @@ export default function UserScreen() {
     <>
       <FlatList
         data={users}
-        renderItem={({ item }) => <UsersList users={item}  />}
+        renderItem={({ item }) => <UsersList users={item} />}
       />
     </>
   );

@@ -5,7 +5,7 @@ import { Chat, OverlayProvider } from "stream-chat-expo";
 import { UseAuth } from "./AuthProvider";
 import { supabase } from "@/lib/supabase";
 
-const client = StreamChat.getInstance(process.env.EXPO_PUBLIC_STREAM_API_KEY);
+export const client = StreamChat.getInstance(process.env.EXPO_PUBLIC_STREAM_API_KEY);
 
 const ChatProvider = ({ children }: PropsWithChildren) => {
   const [isReady, setIsReady] = useState(false);
